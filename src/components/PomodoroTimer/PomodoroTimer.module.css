@@ -1,0 +1,48 @@
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: var(--pink-100);
+  border-radius: 10px;
+  animation: slideIn 0.2s ease-out;
+}
+.display {
+  font-family: 'Courier New', monospace;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--pink-600);
+  letter-spacing: 2px;
+  min-width: 60px;
+}
+.running .display {
+  animation: pulse 1s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.finished .display {
+  color: #52c41a;
+}
+.btnTimer {
+  background: var(--white);
+  border: 1.5px solid var(--pink-300);
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-family: inherit;
+  color: var(--pink-600);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btnTimer:hover {
+  background: var(--pink-200);
+  border-color: var(--pink-400);
+}
+.status {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-left: auto;
+}

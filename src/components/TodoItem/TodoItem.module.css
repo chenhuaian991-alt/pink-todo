@@ -1,0 +1,93 @@
+.item {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px 24px;
+  gap: 14px;
+  border-bottom: 1px solid var(--pink-100);
+  transition: background 0.2s, opacity 0.25s, transform 0.25s;
+  animation: slideIn 0.3s ease-out;
+}
+.item:hover { background: var(--pink-100); }
+.deleting {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.checkbox {
+  width: 22px; height: 22px;
+  border: 2px solid var(--pink-300);
+  border-radius: 6px;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s;
+  margin-top: 2px;
+}
+.checkbox:hover { border-color: var(--pink-500); }
+.checked {
+  background: linear-gradient(135deg, var(--pink-400), var(--pink-500));
+  border-color: var(--pink-500);
+}
+.checked::after {
+  content: '✓';
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+}
+.textRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.text {
+  flex: 1;
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.5;
+  word-break: break-word;
+  transition: all 0.3s;
+}
+.done {
+  text-decoration: line-through;
+  color: var(--text-light);
+  opacity: 0.6;
+}
+.badge {
+  flex-shrink: 0;
+  background: var(--pink-200);
+  color: var(--pink-700);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.btnIcon {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  padding: 4px;
+  line-height: 1;
+}
+.item:hover .btnIcon { opacity: 0.5; }
+.btnIcon:hover { opacity: 1 !important; transform: scale(1.2); }
+
+@media (max-width: 480px) {
+  .item { padding: 14px 16px; }
+}

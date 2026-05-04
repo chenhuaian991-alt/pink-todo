@@ -1,0 +1,37 @@
+.deco {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 4px 12px rgba(255,133,192,0.25));
+}
+.deco img {
+  display: block;
+  width: 140px;
+  height: auto;
+}
+.topLeft {
+  top: 10px; left: 10px;
+  animation: decoBob 4s ease-in-out infinite;
+}
+.topRight {
+  top: 10px; right: 10px;
+  animation: decoBob 4.5s ease-in-out infinite;
+  animation-delay: -1.5s;
+}
+.bottomLeft {
+  bottom: 10px; left: 10px;
+  animation: decoBob 5s ease-in-out infinite;
+  animation-delay: -3s;
+}
+.bottomRight {
+  bottom: 10px; right: 10px;
+  animation: decoBob 4.2s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+@media (max-width: 768px) {
+  .deco img { width: 110px; }
+}
+@media (max-width: 480px) {
+  .deco img { width: 90px; }
+}
